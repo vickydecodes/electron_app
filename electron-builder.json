@@ -1,6 +1,7 @@
 {
     "appId": "com.example.app",
     "files": ["dist-electron", "dist-react"],
+    "extraResources": ["dist-electron/preload.cjs"],
     "icon":"./app_logo.png",
     "mac": {
         "target": "dmg"
