@@ -23,7 +23,7 @@ export function getStaticData() {
   const cpuModel = os.cpus()[0].model;
   const totalMemoryGB = Math.floor(osUtils.totalmem() / 1024);
 
-  return {
+  return  {
     totalStorage,
     cpuModel,
     totalMemoryGB,

@@ -4,8 +4,7 @@ import "./App.css";
 
 function App() {
   const [count, setCount] = useState(0);
-  const [data, setData] = useState({});
-
+  const [data, setData] = useState<Statistics | null>(null);
   useEffect(() => {
     window.electron.subscribeStatistics((stats) => setData(stats));
   }, []);
@@ -18,7 +17,6 @@ function App() {
         </a>
       </div>
       <ul>
-        {console.log({data: data})}
         <li><b style={{marginRight: '10px'}}>Cpu Usage:   </b>{data?.cpuUsage}</li>
         <li><b style={{marginRight: '10px'}}>Ram Usage:   </b>{data?.ramUsage}</li>
         <li><b style={{marginRight: '10px'}}>Storage Usage:    </b>{data?.storageUsage}</li>

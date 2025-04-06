@@ -4,9 +4,6 @@ import { isDev } from './utils.js';
 import { getStaticData, pollResources } from './resourceManager.js';
 import { getPreloadPath } from './pathResolver.js';
 
-
-
-
 app.on('ready', () => {
     const mainWindow = new BrowserWindow({
         webPreferences: {
